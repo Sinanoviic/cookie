@@ -94,7 +94,41 @@ body {
   transition: transform 0.3s ease;
   width: 180px; /* fiksna širina za sve kartice */
   flex-shrink: 0; /* da se ne smanjuju kod flexboxa */
+    opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
 }
+
+.cookie-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cookie-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle, rgba(255, 204, 128, 0.25), transparent 70%);
+  transform: translate(-50%, -50%) scale(0.8);
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: -1;
+}
+
+
+.cookie-card:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
 
 
 .cookie-card:hover {
@@ -114,3 +148,59 @@ body {
   font-size: 1.5vw;
 }
 
+/* Slide i fade-in efekat pri učitavanju */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Lebdeći efekt kolačića */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Puls na hover */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Animacija ulaska svake kartice */
+.cookie-card {
+  animation: slideFadeIn 0.8s ease forwards;
+  opacity: 0; /* početno nevidljiv, animacija ga prikazuje */
+}
+
+/* Staggered efekat – svaka kartica sa malim zakašnjenjem (mora se dodati u HTML ručno ili JS-om ako želiš dinamički) */
+.cookie-card:nth-child(1) { animation-delay: 0.1s; }
+.cookie-card:nth-child(2) { animation-delay: 0.2s; }
+.cookie-card:nth-child(3) { animation-delay: 0.3s; }
+.cookie-card:nth-child(4) { animation-delay: 0.4s; }
+.cookie-card:nth-child(5) { animation-delay: 0.5s; }
+
+/* Hover efekt za karticu */
+.cookie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover efekt za sliku kolačića */
+.cookie-card:hover img {
+  animation: pulse 0.6s ease;
+}
+
+/* Floating efekt slike stalno */
+.cookie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5vw;
+  animation: float 3s ease-in-out infinite;
+}
