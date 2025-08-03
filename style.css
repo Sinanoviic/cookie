@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden; /* sprečava horizontalni scroll */
+}
+
+body {
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  background-color: #fffaf2;
+}
+
+/* Hero sekcija */
+.hero {
+  height: 100vh;
+  background-color: #fff3e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 20vw;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #3b1f0e;
+  letter-spacing: 1vw;
+  position: absolute;
+  z-index: 0;
+  text-transform: uppercase;
+  filter: blur(2px);
+  opacity: 0.4;
+}
+
+.cookie-img-3d {
+  position: absolute;
+  top: 49%;
+  left: 45%;
+  transform: translate(-50%, -50%) scale(1.1);
+  width: 20vw;
+  height: auto;
+  z-index: 2;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+}
+
+
+/* Sekcija: Naši kolačići */
+.cookie-boxes {
+  height: 100vh;             /* zauzima cijeli ekran */
+  display: flex;             /* flex da centriramo sadržaj */
+  flex-direction: column;
+  justify-content: center;   /* vertikalno centriranje */
+  align-items: center;       /* horizontalno centriranje */
+  background-color: #fffaf2;
+  padding: 5vw 8vw;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.cookie-boxes h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5vw;
+  color: #5e3d2c;
+  margin-bottom: 3vw;
+}
+
+.cookie-container {
+  display: flex;               /* flex za horizontalni raspored */
+  flex-direction: row;         /* po defaultu je row, ali da bude jasno */
+  gap: 2vw;                   /* razmak između kolačića */
+  justify-content: center;     /* centriranje horizontalno */
+  align-items: center;         /* vertikalno centriranje */
+  flex-wrap: nowrap;           /* sprječava da prelaze u novi red */   
+  padding-bottom: 1vw;         /* malo donjeg razmaka ako treba */
+}
+
+
+.cookie-card {
+  background-color: #fff3e0;
+  padding: 1.5vw;
+  border-radius: 1vw;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  width: 180px; /* fiksna širina za sve kartice */
+  flex-shrink: 0; /* da se ne smanjuju kod flexboxa */
+}
+
+
+.cookie-card:hover {
+  transform: scale(1.05);
+}
+
+.cookie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5vw;
+}
+
+.cookie-card h3 {
+  margin-top: 1vw;
+  font-family: 'Bebas Neue', sans-serif;
+  color: #3b1f0e;
+  font-size: 1.5vw;
+}
+
