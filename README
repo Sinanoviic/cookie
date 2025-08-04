@@ -1,0 +1,30 @@
+# COOKIE Web Page
+
+This is a simple and modern web page dedicated to showcasing different types of cookies.
+
+## Project Description
+
+The page consists of two main sections:
+
+- **Hero Section**: A full viewport introductory section featuring a large blurred "COOKIE" title and a 3D cookie image, providing a visually engaging opening.
+- **Our Cookies Section**: After scrolling down, a sleek horizontal carousel of cookie cards is displayed, centered vertically and horizontally within the viewport. Each card includes an image and the name of the cookie variety.
+
+## Technologies Used
+
+- HTML5 and CSS3 (utilizing Flexbox and Grid layouts)
+- Google Font 'Bebas Neue' for a modern typographic style
+- Responsive design that adapts to various screen sizes
+- Smooth scrolling behavior and subtle animations (e.g., bounce effect on scroll arrow)
+
+## Key Features
+
+- Fullscreen hero section with striking visuals and effects
+- Horizontally arranged cookie cards with centered alignment
+- Clean and warm color scheme reminiscent of cookies
+- User-friendly smooth scrolling experience
+
+---
+
+This project can serve as a foundation for product showcase websites or visually-driven portfolios.
+
+---
