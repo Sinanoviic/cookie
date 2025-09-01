@@ -1,4 +1,4 @@
-/* Reset i osnovne postavke */
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ body {
   background-color: #fffaf2;
 }
 
-/* Hero sekcija */
+
 .hero {
   height: 100vh;
   background-color: #fff3e0;
@@ -51,7 +51,7 @@ body {
   filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
 }
 
-/* Sekcija: Naši kolačići */
+
 .cookie-boxes {
   min-height: 100vh;
   display: flex;
