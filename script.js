@@ -4,7 +4,7 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      observer.unobserve(entry.target); // animira se samo jednom
+      observer.unobserve(entry.target);
     }
   });
 }, {

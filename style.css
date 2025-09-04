@@ -74,7 +74,6 @@ body {
   margin-bottom: 3vw;
 }
 
-/* Container kolačića */
 .cookie-container {
   display: flex;
   flex-wrap: wrap;
@@ -83,7 +82,6 @@ body {
   padding-bottom: 1vw;
 }
 
-/* Kartice kolačića */
 .cookie-card {
   background-color: #fff3e0;
   padding: 1.5vw;
@@ -169,7 +167,6 @@ body {
   font-size: 1.5vw;
 }
 
-/* Animacije */
 @keyframes slideFadeIn {
   0% {
     opacity: 0;
@@ -192,9 +189,6 @@ body {
   100% { transform: scale(1); }
 }
 
-/* --- Responzivni dizajn --- */
-
-/* Mobilni telefoni (do 480px) */
 @media (max-width: 480px) {
   .cookie-boxes {
     padding: 3vw 4vw;
@@ -221,7 +215,6 @@ body {
   }
 }
 
-/* Manji tableti (481px - 768px) */
 @media (max-width: 768px) {
   .cookie-container {
     justify-content: space-between;
@@ -232,7 +225,7 @@ body {
   }
 }
 
-/* Veći tableti i manji desktop (769px - 1024px) */
+
 @media (max-width: 1024px) {
   .cookie-container {
     justify-content: space-between;
@@ -258,7 +251,7 @@ body {
     margin: 0 auto;
   }
 
-  /* Centriraj drugi red (4. i 5. kolačić) */
+
   .cookie-card:nth-child(4),
   .cookie-card:nth-child(5) {
     grid-column: span 1;
